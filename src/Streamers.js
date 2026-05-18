@@ -47,9 +47,9 @@ function Streamers() {
             }
         </div>
         {
-            <div className={popupClassName}>
+            <div className={popupClassName} onClick={() => closePopup()}>
                 {currentStreamer != null ?
-                    <div className="popupStreamer">
+                    <div className="popupStreamer" onClick={(event)=>{event.stopPropagation();}}>
                         <div className="popupClose" onClick={() => closePopup()}>X</div>
                         <img src={currentStreamer.avatar_url} alt={currentStreamer.display_name} className="popupAvatar"></img>
                         <h2>{currentStreamer.display_name}</h2>
