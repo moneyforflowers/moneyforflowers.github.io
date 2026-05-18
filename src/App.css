@@ -1,0 +1,224 @@
+.streamersList {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.streamersList .streamer {
+    width: 280px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    margin: 10px 5px 10px 5px;
+    transition:0.3s;
+}
+
+.streamersList .streamer:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.streamersList .streamer img {
+    height: 100px;
+    width: 100px;
+    clip-path: circle();
+}
+
+.streamersList .streamer p {
+    margin: 10px;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+}
+
+.overlayPopupStreamer {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 250ms;
+}
+
+.overlayPopupStreamer--visible {
+    opacity: 1;
+    pointer-events: initial;
+}
+
+.overlayPopupStreamer--invisible {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.popupStreamer {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popupStreamer h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+  margin-top: 20px;
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+
+.popupStreamer p {
+  color: gray;
+  font-family: Tahoma, Arial, sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.popupStreamer .popupClose {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popupStreamer .popupClose:hover {
+    cursor: pointer;
+    color: lightcoral;
+}
+
+.popupStreamer .popupAvatar {
+    height: 200px;
+    width: 200px;
+    clip-path: circle();
+}
+.popupStreamer .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+.popupStreamer .popupStreamerReseaux {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.popupStreamer .streamerLink {
+    padding: 5px;
+    min-width: 40px;
+    height: 40px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Tahoma, Arial, sans-serif;
+    font-size: 18px;
+    margin: 10px;
+}
+
+.popupStreamer .logoRS {
+    width: 40px;
+    height: 40px;
+}
+
+.popupStreamer .bluesky {
+    background-color: lightblue;
+    color: white;
+}
+.popupStreamer .twitch {
+    background-color: #9147FF;
+    color: white;
+}
+.popupStreamer .twitch img {
+    position: relative;
+    top: 4px;
+    left: -1px;
+}
+.popupStreamer .instagram {
+    background-color: coral;
+    color: white;
+}
+.popupStreamer .tiktok {
+    background-color: #FE2C55;
+    color: white;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+}
+
+.stats .statBlock {
+    background-color: beige;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+    border-radius: 5px;
+}
+
+.stats .statBlock p {
+    margin: 0;
+}
+
+.stats .statBlock .titreStatBlock {
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+}
+
+.stats .statBlock .valueStatBlock {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.lastDonations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lastDonations .donation {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    max-width: 900px;
+    background-color: beige;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.lastDonations .donation #name {
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.lastDonations .donation #message {
+    font-style: italic;
+    margin-left: 10px;
+}
+
+.lastDonations .donation #amount {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 700px){
+  .popupStreamer{
+    width: 70%;
+  }
+}

@@ -2,8 +2,11 @@ import { useEffect, useState } from "react";
 import { GetStreamers } from "./Services/GetStreamers";
 import { GetLiveChannels } from "./Services/GetLiveChannels";
 
+
 function Streamers() {
 
+    const [currentStreamer, setCurrentStreamer] = useState(null);
+    const [popupClassName, setPopupClassName] = useState("overlayPopupStreamer overlayPopupStreamer--invisible");
     const [streamersData, setStreamersData] = useState([]);
     const [liveChannels, setLiveChannels] = useState([])
     useEffect(function () {
@@ -20,18 +23,47 @@ function Streamers() {
             }
         );
     }, []);
+
+    
+
+    const openPopup = (value) => {
+        setPopupClassName("overlayPopupStreamer overlayPopupStreamer--visible")
+        setCurrentStreamer(value)
+    }
+    
+    const closePopup = () => {
+        setPopupClassName("overlayPopupStreamer overlayPopupStreamer--invisible")
+    }
     
     return <>
+        <div className="streamersList">
+            {
+                streamersData.map((streamer) => {
+                    return <div key={streamer.id} className="streamer" onClick={() => openPopup(streamer)}>
+                        <img src={streamer.avatar_url} alt={streamer.display_name}></img>
+                        <p>{streamer.display_name}</p>
+                    </div>
+                })
+            }
+        </div>
         {
-            streamersData.map((streamer) => {
-                return <div key={streamer.id}>{streamer.display_name}</div>
-            })
-        }
-        <p>Live Channels</p>
-        {
-            liveChannels.map((streamerLive) => {
-                return <div key={streamerLive.user_name}>{streamerLive.user_name} est en live !</div>
-            })
+            <div className={popupClassName}>
+                {currentStreamer != null ?
+                    <div className="popupStreamer">
+                        <div className="popupClose" onClick={() => closePopup()}>X</div>
+                        <img src={currentStreamer.avatar_url} alt={currentStreamer.display_name} className="popupAvatar"></img>
+                        <h2>{currentStreamer.display_name}</h2>
+                        <p>{currentStreamer.pronoms ? "(" + currentStreamer.pronoms + ")" : "(pronoms non indiqués)"}</p>
+                        
+                        <h3>Ses réseaux :</h3>
+                        <div className="popupStreamerReseaux">
+                            {currentStreamer.bluesky != null ? <a className="streamerLink bluesky" href={"https://bsky.app/profile/" + currentStreamer.bluesky} target="_blank" rel="noreferrer"><img src="Bluesky_Logo.png" alt="logoBluesky" className="logoRS"></img></a> : <></>}
+                            {currentStreamer.twitch_name != null ? <a className="streamerLink twitch" href={"https://twitch.tv/" + currentStreamer.twitch_name} target="_blank" rel="noreferrer"><img src="twitch.png" alt="logoTwitch" className="logoRS"></img></a> : <></>}
+                            {currentStreamer.instagram != null ? <a className="streamerLink instagram" href={"https://instagram.com/" + currentStreamer.instagram} target="_blank" rel="noreferrer"><img src="Instagram_icon.png" alt="logoInsta" className="logoRS"></img></a> : <></>}
+                        </div>
+                    </div>
+                : <></>}
+            </div>
         }
     </>;
 
