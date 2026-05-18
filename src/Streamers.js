@@ -40,7 +40,8 @@ function Streamers() {
             {
                 streamersData.map((streamer) => {
                     return <div key={streamer.id} className="streamer" onClick={() => openPopup(streamer)}>
-                        <img src={streamer.avatar_url} alt={streamer.display_name}></img>
+                        {liveChannels.findIndex(element => element.user_login === streamer.twitch_name) > -1 ? <img src="red-circle-blink.gif" alt="En live" className="pageStreamersLive" /> : <></>}
+                        <img src={streamer.avatar_url} alt={streamer.display_name} className="avatar"></img>
                         <p>{streamer.display_name}</p>
                     </div>
                 })
@@ -54,7 +55,7 @@ function Streamers() {
                         <img src={currentStreamer.avatar_url} alt={currentStreamer.display_name} className="popupAvatar"></img>
                         <h2>{currentStreamer.display_name}</h2>
                         <p>{currentStreamer.pronoms ? "(" + currentStreamer.pronoms + ")" : "(pronoms non indiqués)"}</p>
-                        
+                        {liveChannels.findIndex(element => element.user_login === currentStreamer.twitch_name) > -1 ? <a href={"https://twitch.tv/" + currentStreamer.twitch_name} target="_blank" rel="noreferrer" id="enLive">{currentStreamer.display_name} est actuellement en live !</a> : <></>}
                         <h3>Ses réseaux :</h3>
                         <div className="popupStreamerReseaux">
                             {currentStreamer.bluesky != null ? <a className="streamerLink bluesky" href={"https://bsky.app/profile/" + currentStreamer.bluesky} target="_blank" rel="noreferrer"><img src="Bluesky_Logo.png" alt="logoBluesky" className="logoRS"></img></a> : <></>}
