@@ -8,6 +8,16 @@
   src: url("../public/La Raimunda.ttf") format("truetype")
 }
 
+@font-face {
+  font-family: "Tarif Arabic Regular";
+  src: url("../public/TarifArabic-Regular.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: "Tarif Arabic Bold";
+  src: url("../public/TarifArabic-Bold.ttf") format("truetype")
+}
+
 body {
     background-color: #111111;
 }

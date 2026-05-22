@@ -1,13 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.7a15275b.css",
-    "main.js": "/static/js/main.a3465ea4.js",
+    "main.css": "/static/css/main.ec6053bb.css",
+    "main.js": "/static/js/main.434d6ecc.js",
+    "static/media/La Raimunda.ttf": "/static/media/La Raimunda.c0ae5d28ba6077198352.ttf",
+    "static/media/Deathridge Demo.ttf": "/static/media/Deathridge Demo.5bd1c2e1ed132bf0c7e5.ttf",
     "index.html": "/index.html",
-    "main.7a15275b.css.map": "/static/css/main.7a15275b.css.map",
-    "main.a3465ea4.js.map": "/static/js/main.a3465ea4.js.map"
+    "main.ec6053bb.css.map": "/static/css/main.ec6053bb.css.map",
+    "main.434d6ecc.js.map": "/static/js/main.434d6ecc.js.map"
   },
   "entrypoints": [
-    "static/css/main.7a15275b.css",
-    "static/js/main.a3465ea4.js"
+    "static/css/main.ec6053bb.css",
+    "static/js/main.434d6ecc.js"
   ]
 }
