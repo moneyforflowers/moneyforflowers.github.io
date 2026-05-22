@@ -1,3 +1,79 @@
+@font-face {
+  font-family: "Deathridge Demo";
+  src: url("../public/Deathridge Demo.ttf") format("truetype")
+}
+
+@font-face {
+  font-family: "La Raimunda";
+  src: url("../public/La Raimunda.ttf") format("truetype")
+}
+
+body {
+    background-color: #111111;
+}
+
+.headerNav {
+    width: 100%;
+    height: 70px;
+    background-color: #e800a8;
+    display: flex;
+}
+
+.headerNav a {
+    height: 100%;
+    padding: 0 20px;
+    align-self: center;
+    line-height: 70px;
+    font-size: 28px;
+    color: #111111;
+    text-decoration: none;
+    font-family: 'Deathridge Demo', 'Segeo UI', 'Roboto', sans-serif;
+}
+
+.headerNav .active {
+    background-color: #F4E9D8;
+}
+
+.headerNav a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #F4E9D8;
+    flex-shrink: 0;
+}
+
+.footer .reseauxDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    font-family: 'La Raimunda', 'Segeo UI', 'Roboto', sans-serif;
+    font-size: 32px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.footer .reseaux {
+    display: flex;
+}
+
+.footer .reseaux a {
+    margin: 20px;
+}
+
+.footer .reseaux img {
+    height: 40px;
+}
+
 .streamersList {
     display: flex;
     justify-content: space-around;
@@ -11,7 +87,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: beige;
+    background-color: #F4E9D8;
     margin: 10px 5px 10px 5px;
     transition:0.3s;
 
@@ -31,6 +107,7 @@
 
 .streamersList .streamer p {
     margin: 10px;
+    
     font-family: Tahoma, Arial, sans-serif;
     font-size: 18px;
 }
@@ -83,6 +160,10 @@
   margin-top: 20px;
   font-size: 32px;
   margin-bottom: 0px;
+}
+
+.popupStreamer h3 {
+    font-family: 'La Raimunda', 'Segeo UI', 'Roboto', sans-serif;
 }
 
 .popupStreamer p {
@@ -149,31 +230,13 @@
     height: 40px;
 }
 
-.popupStreamer .bluesky {
-    background-color: lightblue;
-    color: white;
-}
-.popupStreamer .twitch {
-    background-color: #9147FF;
-    color: white;
-}
-.popupStreamer .twitch img {
-    position: relative;
-    top: 4px;
-    left: -1px;
-}
-.popupStreamer .instagram {
-    background-color: coral;
-    color: white;
-}
-.popupStreamer .tiktok {
-    background-color: #FE2C55;
-    color: white;
-}
-
 .stats {
     display: flex;
     justify-content: center;
+}
+
+.stats p {
+    color: #111111;
 }
 
 .stats .statBlock {
@@ -209,6 +272,10 @@
     align-items: center;
 }
 
+.lastDonations p {
+    color: #F4E9D8;
+}
+
 .lastDonations .donation {
     display: flex;
     justify-content: flex-start;
@@ -217,6 +284,10 @@
     background-color: beige;
     margin-top: 10px;
     border-radius: 5px;
+}
+
+.lastDonations .donation p {
+    color: #111111;
 }
 
 .lastDonations .donation #name {
@@ -232,6 +303,129 @@
 .lastDonations .donation #amount {
     margin-left: auto;
     margin-right: 10px;
+}
+
+.direct {
+    display: flex;
+    flex-direction: column;
+}
+
+.direct p {
+    color: #F4E9D8;
+    text-align: center;
+    font-family: 'Deathridge Demo', 'Segeo UI', 'Roboto', sans-serif;
+    font-size: 32px;
+}
+
+.direct .directHeader {
+    font-size: 48px;
+    margin: 30px;
+}
+
+.direct h5, .direct h5 a {
+    margin: 0;
+    color: #F4E9D8;
+    text-decoration: none;
+    font-family: 'Deathridge Demo', 'Segeo UI', 'Roboto', sans-serif;
+    font-size: 22px;
+}
+.direct h5 a:hover {
+    text-decoration: underline;
+}
+
+.direct .chainesLive p {
+    font-family: 'Deathridge Demo', 'Segeo UI', 'Roboto', sans-serif;
+    font-size: 22px;
+}
+
+.direct .chainesLive {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.direct .result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.direct .cellStream {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  height: 198px;
+  margin: 20px;
+}
+
+.direct .reddot {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: auto;
+  z-index: 5;
+}
+
+.direct .viewerCount
+{
+  background-color: #111111;
+  margin: 6px;
+  padding: 5px 8px;
+  left: 4px;
+  border-radius: 10px;
+  position: absolute;
+  font-family: "Deathridge Demo", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.direct .viewerCount img
+{
+  width: 20px;
+  height: auto;
+  margin-right: 5px;
+}
+
+.direct .viewerCount span {
+    color: #F4E9D8;
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+.img__wrap {
+  position: relative;
+  height: 198px;
+  width: 300px;
+}
+
+.img__description {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  color: #fff;
+  background: rgba(29, 106, 154, 0.32);
+  visibility: hidden;
+  opacity: 0;
+  z-index: 6;
+  margin: 0;
+
+  /* transition effect. not necessary */
+  transition: opacity .2s, visibility .2s;
+}
+
+.img__wrap:hover .img__description {
+  visibility: visible;
+  opacity: 1;
 }
 
 @media screen and (max-width: 700px){

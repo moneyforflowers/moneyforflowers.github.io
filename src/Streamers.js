@@ -56,11 +56,11 @@ function Streamers() {
                         <h2>{currentStreamer.display_name}</h2>
                         <p>{currentStreamer.pronoms ? "(" + currentStreamer.pronoms + ")" : "(pronoms non indiqués)"}</p>
                         {liveChannels.findIndex(element => element.user_login === currentStreamer.twitch_name) > -1 ? <a href={"https://twitch.tv/" + currentStreamer.twitch_name} target="_blank" rel="noreferrer" id="enLive">{currentStreamer.display_name} est actuellement en live !</a> : <></>}
-                        <h3>Ses réseaux :</h3>
+                        <h3>Ses réseaux</h3>
                         <div className="popupStreamerReseaux">
-                            {currentStreamer.bluesky != null ? <a className="streamerLink bluesky" href={"https://bsky.app/profile/" + currentStreamer.bluesky} target="_blank" rel="noreferrer"><img src="Bluesky_Logo.png" alt="logoBluesky" className="logoRS"></img></a> : <></>}
-                            {currentStreamer.twitch_name != null ? <a className="streamerLink twitch" href={"https://twitch.tv/" + currentStreamer.twitch_name} target="_blank" rel="noreferrer"><img src="twitch.png" alt="logoTwitch" className="logoRS"></img></a> : <></>}
-                            {currentStreamer.instagram != null ? <a className="streamerLink instagram" href={"https://instagram.com/" + currentStreamer.instagram} target="_blank" rel="noreferrer"><img src="Instagram_icon.png" alt="logoInsta" className="logoRS"></img></a> : <></>}
+                            {currentStreamer.bluesky != null ? <a className="streamerLink bluesky" href={"https://bsky.app/profile/" + currentStreamer.bluesky} target="_blank" rel="noreferrer"><img src="blueskyBlack.png" alt="logoBluesky" className="logoRS"></img></a> : <></>}
+                            {currentStreamer.twitch_name != null ? <a className="streamerLink twitch" href={"https://twitch.tv/" + currentStreamer.twitch_name} target="_blank" rel="noreferrer"><img src="twitchBlack.png" alt="logoTwitch" className="logoRS"></img></a> : <></>}
+                            {currentStreamer.instagram != null ? <a className="streamerLink instagram" href={"https://instagram.com/" + currentStreamer.instagram} target="_blank" rel="noreferrer"><img src="instaBlack.png" alt="logoInsta" className="logoRS"></img></a> : <></>}
                         </div>
                     </div>
                 : <></>}
