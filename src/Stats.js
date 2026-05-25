@@ -8,7 +8,7 @@ function Stats() {
     const [statsData, setStatsData] = useState();
     const [donationsData, setDonationsData] = useState([]);
     const [donationsAllData, setDonationsAllData] = useState([])
-    const [interval, setInterval] = useState("0")
+    const [interval, setInterval] = useState("1")
 
     useEffect(function () {
         GetStats().then((data) => 
