@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import { GetStats } from "./Services/GetStats";
+import { GetLastDonations } from "./Services/GetLastDonations";
 import { GetDonations } from "./Services/GetDonations";
+import GraphDons from "./GraphDons";
 
 function Stats() {
     const [statsData, setStatsData] = useState();
     const [donationsData, setDonationsData] = useState([]);
-    const [liveChannels, setLiveChannels] = useState([])
+    const [donationsAllData, setDonationsAllData] = useState([])
+    const [interval, setInterval] = useState("0")
+
     useEffect(function () {
         GetStats().then((data) => 
             {
@@ -15,11 +19,14 @@ function Stats() {
     }, []);
     
     useEffect(function () {
-        GetDonations().then((data) => 
+        GetLastDonations().then((data) => 
             {
                 setDonationsData(data)
             }
         );
+        GetDonations().then((data) => {
+            setDonationsAllData(data)
+        });
     }, []);
 
     return <>
@@ -37,6 +44,14 @@ function Stats() {
                 <p className="valueStatBlock">{statsData.average_donation} €</p>
             </div>
         </div>}
+        <GraphDons interval={interval} data={donationsAllData} />
+        <select id="interval" onChange={e => setInterval(e.target.value)} value={interval} className="selectInterval">
+            <option value={"0"}>Jour</option>
+            <option value={"1"}>30min</option>
+            <option value={"2"}>60min</option>
+            <option value={"3"}>2h</option>
+            <option value={"4"}>6h</option>
+        </select>
         <div className="lastDonations">
             <p>Les 10 dernières donations</p>
             {donationsData.map(element => {
