@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { GetStreamers } from "./Services/GetStreamers";
 import { GetLiveChannels } from "./Services/GetLiveChannels";
+import { GetGoalsStreamer } from "./Services/GetGoalsStreamer";
+import DonationsGoals from './DonationsGoals';
 
 
 function Streamers() {
@@ -8,7 +10,8 @@ function Streamers() {
     const [currentStreamer, setCurrentStreamer] = useState(null);
     const [popupClassName, setPopupClassName] = useState("overlayPopupStreamer overlayPopupStreamer--invisible");
     const [streamersData, setStreamersData] = useState([]);
-    const [liveChannels, setLiveChannels] = useState([])
+    const [liveChannels, setLiveChannels] = useState([]);
+    const [currentStreamerGoals, setCurrentStreamerGoals] = useState([]);
     useEffect(function () {
         GetStreamers().then((data) => 
             {
@@ -23,6 +26,15 @@ function Streamers() {
             }
         );
     }, []);
+
+    useEffect(function() {
+        if (currentStreamer !== null)
+        {
+            GetGoalsStreamer(currentStreamer.twitch_name).then((data) => {
+                setCurrentStreamerGoals(data);
+            });
+        }
+    }, [currentStreamer])
 
     
 
@@ -56,6 +68,7 @@ function Streamers() {
                         <h2>{currentStreamer.display_name}</h2>
                         <p>{currentStreamer.pronoms ? "(" + currentStreamer.pronoms + ")" : "(pronoms non indiqués)"}</p>
                         {liveChannels.findIndex(element => element.user_login === currentStreamer.twitch_name) > -1 ? <a href={"https://twitch.tv/" + currentStreamer.twitch_name} target="_blank" rel="noreferrer" id="enLive">{currentStreamer.display_name} est actuellement en live !</a> : <></>}
+                        <DonationsGoals data={currentStreamerGoals} name={currentStreamer.display_name}/>
                         <h3>Ses réseaux</h3>
                         <div className="popupStreamerReseaux">
                             {currentStreamer.bluesky != null ? <a className="streamerLink bluesky" href={"https://bsky.app/profile/" + currentStreamer.bluesky} target="_blank" rel="noreferrer"><img src="blueskyBlack.png" alt="logoBluesky" className="logoRS"></img></a> : <></>}

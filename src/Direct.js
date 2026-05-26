@@ -20,12 +20,14 @@ function Direct() {
     }, []);
     
     let viewer_count = 0;
+    let index = 0;
     liveChannels.forEach(element => {
+        index++;
         viewer_count += element.viewer_count;
     });
 
     return <div className="direct">
-        {viewer_count > 0 && <>
+        {index > 0 && <>
                 <p className="directHeader">Ces chaines sont en live !</p>
                 <div className="chainesLive">
                 {
@@ -54,7 +56,7 @@ function Direct() {
                 <p>Nombre de viewers sur les lives Money for Flowers : {viewer_count}</p>
             </>
         }
-        {viewer_count === 0 && <>
+        {index === 0 && <>
             <p className="directHeader">Aucune chaine du MFF en direct pour le moment :(</p>
         </>}
     </div>;

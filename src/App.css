@@ -84,6 +84,131 @@ body {
     height: 40px;
 }
 
+.homeContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.homeContent .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent .header img {
+    margin: auto;
+    filter: invert(97%) sepia(6%) saturate(1167%) hue-rotate(315deg) brightness(102%) contrast(91%);
+}
+
+.homeContent p {
+    font-size: 18px;
+    color: #F4E9D8;
+    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+.homeContent .mff, .homeContent .asso, .homeContent .precedentesEditions {
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.homeContent .links {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+
+.homeContent .links a, .homeContent .lienDons a {
+    background-color: #F4E9D8;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    color:#111111;
+    text-decoration: none;
+    margin-left: 20px; 
+}
+
+.homeContent .lienDons {
+    margin-top: 10px;
+}
+
+.homeContent .lienDons a {
+    margin-left: 0;
+}
+
+.homeContent .dons, .homeContent .precedentesEditions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent .precedentesEditionsAnnees {
+    display: flex;
+}
+
+.homeContent .anneePrecente {
+    background-color: #F4E9D8;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeContent .anneePrecente p {
+    color: #111111;
+}
+
+.homeContent .anneePrecente .montant {
+    color: green;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.homeContent .anneePrecente a {
+    color: #111111;
+    text-decoration: none;
+}
+
+.homeContent .anneePrecente a:hover {
+    text-decoration: underline;
+}
+
+.homeContent .cagnotteDiv {
+    
+    background-color: #F4E9D8;
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.homeContent .cagnotteDiv p {
+    font-weight: bold;
+    font-size: 28px;
+    margin: 5px;
+}
+
+.homeContent .cagnotteDiv .cagnotte {
+    color: #111111;
+}
+
+.homeContent .cagnotteDiv .montant {
+    color: green;
+}
+
+.homeContent .links a:hover, .homeContent .lienDons a:hover {
+    text-decoration: underline;
+}
+
+
 .streamersList {
     display: flex;
     justify-content: space-around;
@@ -238,6 +363,95 @@ body {
 .popupStreamer .logoRS {
     width: 40px;
     height: 40px;
+}
+
+.popupStreamer .donationsGoals {
+    width: 100%;
+}
+
+.popupStreamer .donationsGoals p {
+    color: #111111;
+    font-style: normal;
+    font-size: 14px;
+}
+
+.popupStreamer .donationsGoals .currentGoal
+{
+    font-weight: bold;
+    text-align: center;
+}
+
+.popupStreamer .donationsGoals .currentGoalName {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.popupStreamer .donationsGoals .currentGoalBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popupStreamer .currentGoalBar .currentGoalProgress {
+    height: 20px;
+    border-radius: 10px;
+    background: #111111;
+}
+
+.popupStreamer .sesDonationsGoals {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popupStreamer .sesDonationsGoals p {
+    font-size: 18px;
+}
+
+.popupStreamer .sesDonationsGoals button {
+    height: 30px;
+    width: 30px;
+}
+
+.currentGoalProgressFill {
+    border-radius: 10px;
+}
+
+.popupStreamer .currentGoalBar .currentGoalPrice {
+    margin-left: 10px;
+}
+
+.popupStreamer .listGoals {
+    max-height: 180px;
+    overflow: scroll;
+    margin: 0;
+}
+
+.popupStreamer .listGoals li {
+    list-style: none;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popupStreamer .listGoals li p {
+    font-size: 16px;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.popupStreamer .listGoals li .amount {
+    width: 60px;
+    text-align: right;
+}
+
+.popupStreamer .listGoals li .validate {
+    color: green;
 }
 
 .stats {
