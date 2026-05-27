@@ -105,6 +105,11 @@ body {
     font-size: 18px;
     color: #F4E9D8;
     font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+.header p {
+    width: 80%;
 }
 
 .homeContent .mff, .homeContent .asso, .homeContent .precedentesEditions {
@@ -130,6 +135,11 @@ body {
     margin-left: 20px; 
 }
 
+.homeContent .links .twitch {
+    background-color: #6441a5;
+    color:#F4E9D8;
+}
+
 .homeContent .lienDons {
     margin-top: 10px;
 }
@@ -143,6 +153,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.homeContent .dons p {
+    width: 80%;
 }
 
 .homeContent .precedentesEditionsAnnees {
@@ -286,6 +300,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: scroll;
 }
 
 .popupStreamer h2 {
@@ -527,10 +542,12 @@ body {
 .lastDonations .donation #amount {
     margin-left: auto;
     margin-right: 10px;
+    text-align: right;
 }
 
 .chartLine {
     width: 800px;
+    height: 400px !important;
     background-color: #F4E9D8;
     border-radius: 20px;
     margin: auto;
@@ -665,8 +682,76 @@ body {
   opacity: 1;
 }
 
+.calendar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar .dayName {
+    font-size: 32px;
+    font-family: 'La Raimunda', 'Segeo UI', 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.calendar .eventsDay {
+    position: relative;
+    background-color: #F4E9D8;
+    height: 720px;
+}
+
+.calendar p {
+    color: #F4E9D8;
+}
+
+.event {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.event img {
+    position: relative;
+    height: 100%;
+}
+
+.calendar .events .day {
+    height: 780px;
+    width: 360px;
+    margin-bottom: 20px;
+}
+
+.calendar .events .day .eventName {
+    margin: 0;
+    color:#111111;
+    margin-left: 10px;
+    font-family: "Deathridge Demo", Arial, Helvetica, sans-serif;
+}
+
+.calendar .events .day .hour {
+    color:#111111;
+    margin: 0;
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 800px){
+    .chartLine {
+        width: 100%;
+    }
+    .stats .statBlock {
+        margin: 10px;
+    }
+}
+
 @media screen and (max-width: 700px){
   .popupStreamer{
     width: 70%;
   }
+
+  .headerNav {
+    justify-content: center;
+  }
+
 }

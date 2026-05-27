@@ -114,8 +114,6 @@ function GraphDons(props) {
             ]}
             xAxis={[{ scaleType: 'point', data: datesArray, height: 28, tickLabelStyle: {display: interval === "0" ? "block" : "none"} }]}
             yAxis={[{ width: 50 }]}
-            height={400}
-            width={700}
             className='chartLine'
         />}</>
     )
