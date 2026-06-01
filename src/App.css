@@ -131,7 +131,6 @@ body {
 
 .homeContent .header img {
     margin: auto;
-    filter: brightness(0) saturate(100%) invert(96%) sepia(59%) saturate(262%) hue-rotate(310deg) brightness(99%) contrast(94%);
     margin-top: 30px;
 }
 

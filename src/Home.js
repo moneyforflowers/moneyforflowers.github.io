@@ -28,8 +28,8 @@ function Home() {
     // }, [])
     return <div className="homeContent">
         <div className="header">
-            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={250} className="web"/>
-            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={120} className="mobile"/>
+            <img src="logoWhite.svg" alt="logoMFF" height={250} className="web"/>
+            <img src="logoWhite.svg" alt="logoMFF" height={120} className="mobile"/>
             <p>Money for Flowers, marathon caritatif du 30 Juillet au 2 Août 2026, au profit d'Utopia 56.</p>
         </div>
         <div className="mff">
