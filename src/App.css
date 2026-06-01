@@ -48,6 +48,24 @@ body {
     text-decoration: underline;
 }
 
+.headerNav .reseaux {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.headerNav .reseaux a {
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.headerNav .reseaux img {
+    height: 30px;
+}
+
 .footer {
     display: flex;
     flex-direction: column;

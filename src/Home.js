@@ -32,14 +32,14 @@ function Home() {
             <p>Money for Flowers, marathon caritatif du 30 Juillet au 2 Août 2026, au profit d'Utopia 56.</p>
         </div>
         <div className="mff">
-            <p className="presensation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lorem eget ante tincidunt tincidunt in vel eros. Aenean porta venenatis tellus in dictum. Maecenas volutpat laoreet tellus nec tempus. Praesent malesuada maximus dolor ut bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p className="presensation">Le Money for Flowers (ou MFF) est un événement caritatif en ligne sur Twitch ayant lieu du 30 juillet au 02 août 2026 qui récolte des fonds pour l’association Utopia 56.<br/>Lors d’un marathon de streaming qui s’étend du jeudi 30 juillet à 18h au dimanche 02 août à 23h59, ce sont plus de 70 streameurs·euses qui mobilisent leurs communautés pour récolter des dons au profit d’Utopia 56.</p>
             <div className="links">
                 <NavLink to="/direct" className="twitch">Les directs &gt;</NavLink>
                 <NavLink to="/streamers">Les streamer.euses du MFF &gt;</NavLink>
             </div>
         </div>
         <div className="asso">
-            <p className="presensation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac lorem eget ante tincidunt tincidunt in vel eros. Aenean porta venenatis tellus in dictum. Maecenas volutpat laoreet tellus nec tempus. Praesent malesuada maximus dolor ut bibendum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+            <p className="presensation">Utopia 56 est une association engagée depuis 10 ans à travers 7 antennes en France, pour l’accueil, les droits et à dignité des personnes exilées et des personnes à la rue, à travers des actions de maraudes, d’hébergements solidaires, d’orientation, de suivis et de plaidoyers.</p>
             <div className="links">
                 <a href="https://utopia56.org/" target="_blank" rel="noreferrer">L'association &gt;</a>
             </div>
