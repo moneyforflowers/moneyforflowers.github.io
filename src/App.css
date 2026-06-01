@@ -829,12 +829,32 @@ body {
     margin-right: 10px;
 }
 
+.mobile {
+    display: none;
+}
+
+.presensationAsso {
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 800px){
     .chartLine {
         width: 100%;
     }
     .stats .statBlock {
         margin: 10px;
+    }
+
+    .homeContent p {
+        font-size: 16px;
+    }
+
+    .header p {
+        font-size: 22px;
+    }
+
+    .homeContent .links a {
+        font-size: 16px;
     }
 }
 
@@ -846,5 +866,17 @@ body {
   .headerNav {
     justify-content: center;
   }
+  .headerNav a {
+    padding: 0 10px;
+  }
+  .headerNav .reseaux {
+    margin-right: 10px;
+  }
+  .web {
+    display: none;
+  }
 
+  .mobile {
+    display: block;
+  }
 }

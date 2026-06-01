@@ -28,7 +28,8 @@ function Home() {
     // }, [])
     return <div className="homeContent">
         <div className="header">
-            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={250}/>
+            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={250} className="web"/>
+            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={120} className="mobile"/>
             <p>Money for Flowers, marathon caritatif du 30 Juillet au 2 Août 2026, au profit d'Utopia 56.</p>
         </div>
         <div className="mff">
@@ -40,9 +41,10 @@ function Home() {
         </div>
         <div className="asso">
             <a href="https://utopia56.org/" target="_blank" rel="noreferrer">
-                <img src="utopia.svg" height={103} width={543} alt="utopia"/>
+                <img src="utopia.svg" height={103} width={543} alt="utopia" className="web"/>
+                <img src="utopia.svg" height={53} alt="utopia" className="mobile"/>
             </a>
-            <p className="presensation">Utopia 56 est une association engagée depuis 10 ans à travers 7 antennes en France, pour l’accueil, les droits et à dignité des personnes exilées et des personnes à la rue, à travers des actions de maraudes, d’hébergements solidaires, d’orientation, de suivis et de plaidoyers.</p>
+            <p className="presensationAsso">Utopia 56 est une association engagée depuis 10 ans à travers 7 antennes en France, pour l’accueil, les droits et à dignité des personnes exilées et des personnes à la rue, à travers des actions de maraudes, d’hébergements solidaires, d’orientation, de suivis et de plaidoyers.</p>
             <div className="links">
                 <a href="https://utopia56.org/" target="_blank" rel="noreferrer">L'association &gt;</a>
             </div>
