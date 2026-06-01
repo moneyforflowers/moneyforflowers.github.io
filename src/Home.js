@@ -28,7 +28,7 @@ function Home() {
     // }, [])
     return <div className="homeContent">
         <div className="header">
-            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={200} width={300}/>
+            <img src="logoMFF_2026_full.svg" alt="logoMFF" height={250}/>
             <p>Money for Flowers, marathon caritatif du 30 Juillet au 2 Août 2026, au profit d'Utopia 56.</p>
         </div>
         <div className="mff">
@@ -39,6 +39,9 @@ function Home() {
             </div>
         </div>
         <div className="asso">
+            <a href="https://utopia56.org/" target="_blank" rel="noreferrer">
+                <img src="utopia.svg" height={103} width={543} alt="utopia"/>
+            </a>
             <p className="presensation">Utopia 56 est une association engagée depuis 10 ans à travers 7 antennes en France, pour l’accueil, les droits et à dignité des personnes exilées et des personnes à la rue, à travers des actions de maraudes, d’hébergements solidaires, d’orientation, de suivis et de plaidoyers.</p>
             <div className="links">
                 <a href="https://utopia56.org/" target="_blank" rel="noreferrer">L'association &gt;</a>
@@ -57,9 +60,15 @@ function Home() {
         <div className="precedentesEditions">
             <p className="precedentesEditionsText">Les précédentes éditions du Money for Flowers</p>
             <div className="precedentesEditionsAnnees">
+                <div className="anneeDiv">
+                    
                 <div className="anneePrecente">
+                    <p className="annee">2025</p>
                     <p className="montant">15418 €</p>
-                    <p>Au profit de <a href="https://www.nightline.fr/" target="_blank" rel="noreferrer">Nightline</a></p>
+                </div>
+                <p>Au profit de</p>
+                <a href="https://www.nightline.fr/" target="_blank" rel="noreferrer"><img src="nightline.svg" height={50} alt="nightline"/></a>
+
                 </div>
             </div>
         </div>

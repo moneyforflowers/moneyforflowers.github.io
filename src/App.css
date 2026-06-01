@@ -18,6 +18,17 @@
   src: url("../public/TarifArabic-Bold.ttf") format("truetype")
 }
 
+@font-face {
+    font-family: "Road Rage";
+    src: url("../public/Road_Rage.otf") format("opentype");
+}
+
+
+
+main {
+  min-height: calc(100vh - 232px);
+}
+
 body {
     background-color: #111111;
 }
@@ -73,6 +84,9 @@ body {
     justify-content: center;
     color: #F4E9D8;
     flex-shrink: 0;
+    background-image: url("../public/reseaux.png");
+    background-size: 100% 100%;
+    padding-top: 100px;
 }
 
 .footer .reseauxDiv {
@@ -88,6 +102,7 @@ body {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 0;
+    color: #e800a8;
 }
 
 .footer .reseaux {
@@ -117,53 +132,87 @@ body {
 .homeContent .header img {
     margin: auto;
     filter: invert(97%) sepia(6%) saturate(1167%) hue-rotate(315deg) brightness(102%) contrast(91%);
+    margin-top: 30px;
 }
 
 .homeContent p {
     font-size: 18px;
     color: #F4E9D8;
-    font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-family: 'Roboto', 'Helvetica Neue', sans-serif;
     text-align: center;
 }
 
 .header p {
     width: 80%;
+    font-size: 32px;
 }
 
 .homeContent .mff, .homeContent .asso, .homeContent .precedentesEditions {
     padding-left: 10%;
     padding-right: 10%;
-    margin-top: 20px;
+}
+
+.homeContent .precedentesEditions {
     margin-bottom: 20px;
+}
+
+.homeContent .asso {
+    background-image: url("../public/asso.png");
+    background-size: 100% 100%;
+    padding-top: 100px;
+    padding-bottom: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeContent .asso p {
+    color: #111111;
 }
 
 .homeContent .links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     margin-right: 20px;
     margin-top: 20px;
 }
 
 .homeContent .links a, .homeContent .lienDons a {
     background-color: #F4E9D8;
-    padding: 10px 20px 10px 20px;
+    padding: 15px 25px 15px 25px;
     border-radius: 15px;
     color:#111111;
     text-decoration: none;
     margin-left: 20px; 
+    font-family: 'Deathridge Demo', 'Roboto';
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.homeContent .presensation {
+    margin-bottom: 40px;
+}
+
+.homeContent .asso .links a {
+    background-color: #111111;
+    color: #F4E9D8;
 }
 
 .homeContent .links .twitch {
-    background-color: #6441a5;
+    background-color: #e800a8;
     color:#F4E9D8;
 }
 
 .homeContent .lienDons {
-    margin-top: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 }
 
 .homeContent .lienDons a {
     margin-left: 0;
+    background-color: #e800a8;
+    color:#F4E9D8;
 }
 
 .homeContent .dons, .homeContent .precedentesEditions {
@@ -175,16 +224,25 @@ body {
 
 .homeContent .dons p {
     width: 80%;
+    font-size: 28px;
 }
 
 .homeContent .precedentesEditionsAnnees {
     display: flex;
 }
 
+.homeContent .anneeDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .homeContent .anneePrecente {
-    background-color: #F4E9D8;
-    padding: 10px 20px 10px 20px;
-    border-radius: 15px;
+    background-image: url("../public/scotch.png");
+    background-size: 100% 100%;
+    padding: 15px 30px 15px 30px;
+    width: 240px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -193,11 +251,18 @@ body {
 
 .homeContent .anneePrecente p {
     color: #111111;
+    margin: 5px;
+}
+
+.homeContent .anneePrecente .annee {
+    font-family: 'La Raimunda', 'Roboto', sans-serif;
+    font-size: 28px;
 }
 
 .homeContent .anneePrecente .montant {
-    color: green;
+    color: #e800a8;
     font-weight: bold;
+    font-family: 'Road Rage', 'Roboto', sans-serif;
     font-size: 22px;
 }
 
@@ -212,9 +277,10 @@ body {
 
 .homeContent .cagnotteDiv {
     
-    background-color: #F4E9D8;
-    padding: 10px 20px 10px 20px;
-    border-radius: 15px;
+    background-image: url("../public/scotch2.png");
+    background-size: 100% 100%;
+    width: 380px;
+    padding: 15px 40px 15px 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -230,14 +296,21 @@ body {
 
 .homeContent .cagnotteDiv .cagnotte {
     color: #111111;
+    font-family: 'La Raimunda', 'Roboto', sans-serif;
 }
 
 .homeContent .cagnotteDiv .montant {
-    color: green;
+    color: #e800a8;
+    font-family: 'Road Rage', 'Roboto', sans-serif;
+    font-size: 32x;
 }
 
 .homeContent .links a:hover, .homeContent .lienDons a:hover {
     text-decoration: underline;
+}
+
+.homeContent .precedentesEditionsText {
+    font-size: 24px;
 }
 
 
@@ -245,6 +318,7 @@ body {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .streamersList .streamer {
@@ -527,6 +601,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .lastDonations p {
