@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.1aaaa771.css",
-    "main.js": "/static/js/main.f33ff390.js",
+    "main.js": "/static/js/main.ce559a0f.js",
     "static/media/Road_Rage.otf": "/static/media/Road_Rage.03e8327bbbb7b1abbae9.otf",
     "static/media/La Raimunda.ttf": "/static/media/La Raimunda.c0ae5d28ba6077198352.ttf",
     "static/media/TarifArabic-Bold.ttf": "/static/media/TarifArabic-Bold.81ed95e48f9ddeea07f9.ttf",
@@ -11,10 +11,10 @@
     "static/media/reseaux.png": "/static/media/reseaux.5bb8a6563ed6a66129e6.png",
     "index.html": "/index.html",
     "main.1aaaa771.css.map": "/static/css/main.1aaaa771.css.map",
-    "main.f33ff390.js.map": "/static/js/main.f33ff390.js.map"
+    "main.ce559a0f.js.map": "/static/js/main.ce559a0f.js.map"
   },
   "entrypoints": [
     "static/css/main.1aaaa771.css",
-    "static/js/main.f33ff390.js"
+    "static/js/main.ce559a0f.js"
   ]
 }
