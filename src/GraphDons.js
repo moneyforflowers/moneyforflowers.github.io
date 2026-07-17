@@ -63,10 +63,10 @@ function GraphDons(props) {
     else if (data.length > 0)
     {
         donationIndex = 0;
-        var thursdayHour = new Date("2025-07-25T00:00:01+02:00");
-        var fridayHour = new Date("2025-07-26T00:00:01+02:00");
-        var saturdayHour = new Date("2025-07-27T00:00:01+02:00");
-        var sundayHour = new Date("2025-07-28T10:00:01+02:00");
+        var thursdayHour = new Date("2025-07-31T00:00:01+02:00");
+        var fridayHour = new Date("2025-08-01T00:00:01+02:00");
+        var saturdayHour = new Date("2025-08-02T00:00:01+02:00");
+        var sundayHour = new Date("2025-08-03T10:00:01+02:00");
 
         var valueThursday = 0;
         var valueFriday = 0;
